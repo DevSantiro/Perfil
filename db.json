@@ -1,0 +1,61 @@
+{
+  "categorias": [
+    {
+      "id": "Web",
+      "nome": "Dessenvolvimento Web",
+      "subcategorias": ["Desenvolvimento", "Web"]
+    },
+    {
+      "id": "front-end",
+      "nome": "Front End",
+      "subcategorias": ["Desenvolvimento", "Front End"]
+    },
+    {
+      "id": "back-end",
+      "nome": "Back End",
+      "subcategorias": ["Desenvolvimento", "Back End"]
+    },
+    {
+      "id": "banco-de-dados",
+      "nome": "Banco de Dados",
+      "subcategorias": ["Banco de Dados"]
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "PHP",
+      "metadescription": "Desenvolvimento em PHP",
+      "body": "PHP Descrição",
+      "categoria": "Web",
+      "subcategoria": "Desenvolvimento"
+    },
+
+    {
+      "id": 2,
+      "title": "Delphi",
+      "metadescription": "Desenvolvimento em Delphi",
+      "body": "Delphi Descrição",
+      "categoria": "back-end",
+      "subcategoria": "Desenvolvimento"
+    },
+    
+    {
+      "id": 3,
+      "title": "MySQL",
+      "metadescription": "Conhecimentos em MySQL",
+      "body": "Conhecimentos em MySQL Descrição",
+      "categoria": "banco-de-dados",
+      "subcategoria": "Banco de Dados"
+    },
+
+    {
+      "id": 4,
+      "title": "React",
+      "metadescription": "Conhecimentos em ReactJS",
+      "body": "Conhecimentos em ReactJS Descrição",
+      "categoria": "front-end",
+      "subcategoria": "React-JS"
+    }
+  ]
+}

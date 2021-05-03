@@ -1,0 +1,33 @@
+.lista-categorias {
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: space-evenly;
+    margin-bottom: 2rem;
+}
+
+.lista-categorias__categoria {
+    font-weight: var(--fonte-peso-categorias);
+    background-color: var(--cor-contraste-claro);
+    border-radius: 3rem;
+    padding: 1rem;
+}
+
+.lista-categorias__categoria--Web{
+    color: var(--cor-contraste-claro);
+    background-color: var(--cor-categoria-web);
+}
+
+.lista-categorias__categoria--banco-de-dados {
+    color: var(--cor-contraste-claro);
+    background-color: var(--cor-categoria-banco-de-dados);
+}
+
+.lista-categorias__categoria--back-end {
+    color: var(--cor-contraste-claro);
+    background-color: var(--cor-categoria-back-end);
+}
+
+.lista-categorias__categoria--front-end {
+    color: var(--cor-contraste-claro);
+    background-color: var(--cor-categoria-front-end);
+}
