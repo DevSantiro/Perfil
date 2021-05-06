@@ -49,7 +49,7 @@ body {
 
 @media(min-width: 1200px) {
 	.container {
-		padding-left: calc((100vw - 900px)/2);
-		padding-right: calc((100vw - 900px)/2);
+		padding-left: calc((70vw - 900px)/2);
+		padding-right: calc((70vw - 900px)/2);
 	}
 }

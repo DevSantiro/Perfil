@@ -1,18 +1,18 @@
 import React from 'react'
-import Apresentacao from '../components/Apresentacao/Apresentacao'
 import ListaCategorias from '../components/ListaCategorias'
 import ListaPost from '../components/ListaPost'
 
-const Home = () => {
+const Formacao = () => {
 
   return (
     <main>
       <div className="container">
-        <h2 className="titulo-pagina">Apresentação</h2>
-        <Apresentacao />
+        <h2 className="titulo-pagina">Formações</h2>
       </div>
+      <ListaCategorias />
+      <ListaPost url={'/posts'} />
     </main>
   )
 }
 
-export default Home
+export default Formacao

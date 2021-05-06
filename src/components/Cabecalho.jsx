@@ -20,7 +20,7 @@ const Cabecalho = () => {
       <nav className="menu-cabecalho">
         <ul className="menu-itens">
           <li><Link to="/" className="menu-item menu-item--entrar">Inicio</Link></li>
-          <li><Link to="/" className="menu-item">Formação</Link></li>
+          <li><Link to="/formacao" className="menu-item">Formação</Link></li>
           <li><Link to="/sobre" className="menu-item">Sobre</Link></li>
         </ul>
       </nav>
