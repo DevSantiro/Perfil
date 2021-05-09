@@ -2,14 +2,16 @@
     width: 100%;
     box-sizing: border-box;
     justify-content: space-evenly;
-    margin-bottom: 2rem;
+    margin-top: 2rem;
+    text-align: center;
 }
 
 .lista-categorias__categoria {
     font-weight: var(--fonte-peso-categorias);
     background-color: var(--cor-contraste-claro);
-    border-radius: 3rem;
+    border-radius: 1.5rem;
     padding: 1rem;
+    margin-bottom: 1rem;
 }
 
 .lista-categorias__categoria--Web{

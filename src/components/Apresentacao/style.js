@@ -1,7 +1,7 @@
+import { TextField, withStyles } from '@material-ui/core';
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  width: 100%;
   width: 16rem;
   background: #fff;
   /* height: 70vh; */
@@ -38,3 +38,31 @@ export const Quadro2 = styled.div`
   width: 78%;
   height: 30rem; /* Should be removed. Only for demonstration */
 `;
+
+export const GridTwoElement = styled.div`
+  margin-bottom: 1.5rem;
+  display: grid;
+  grid-template-columns: [input1] 1fr [input2] 1fr;
+`;
+
+export const GridThreeElement = styled.div`
+  margin-bottom: 1.5rem;
+  display: grid;
+  grid-template-columns: [input1] 1fr [input2] 1fr [input3] 1fr;
+`;
+
+export const GridOneElement = styled.div`
+  margin-bottom: 1.5rem;
+  display: grid;
+  grid-template-columns: [input1] 1fr;
+`;
+
+
+// Estilizando os Componentes do Material UI
+
+export const TextInput = withStyles({
+  root: {
+    // background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+  },
+})(TextField);
+
