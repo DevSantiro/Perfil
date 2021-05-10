@@ -26,7 +26,8 @@
       "id": 1,
       "title": "PHP",
       "metadescription": "Desenvolvimento em PHP",
-      "body": "PHP Descrição",
+      "body": "PHP foi a minha primeira linguagem de programação na área de WEB. Comecei os estudos na universidade e logo obtive meu primeiro emprego. Ao todo foram 1 ano e 5 meses de experiência com o PHP, do básico (PHP puro utilizando conceitos de JavaScript, CSS para melhor interação do usuário a plataforma) até o Laravel.",
+      "destaque": ["PHP","Laravel","JavaScript"],
       "categoria": "Web",
       "subcategoria": "Desenvolvimento"
     },

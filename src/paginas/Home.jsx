@@ -17,9 +17,7 @@ const Home = () => {
         <h2 className="titulo-pagina">Apresentação</h2> {/*A ideia é aqui alterar por uma barra de navegacao (Informações, Formação, Certificação)*/}
         <QuadroPrincipal >
           <Quadro>
-          <div>
             <Apresentacao />
-          </div>
           </ Quadro>
 
           <Quadro2>
@@ -130,8 +128,7 @@ const Home = () => {
                   variant="outlined"
                   multiline
                   rows={4}
-                  defaultValue="
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora sequi similique 
+                  defaultValue=" Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora sequi similique 
                     et earum assumenda fugit rerum, architecto eos corporis ea, voluptate eligendi temporibus 
                     qui exercitationem modi labore. Minus sunt praesentium accusamus, nam, dolore quae, nemo rem 
                     ipsa iusto deserunt dolorem! default"

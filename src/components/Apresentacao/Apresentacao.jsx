@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container } from './style';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -9,8 +9,19 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
+import { Link } from 'react-router-dom';
 
 export default function Apresentacao() {
+
+  const [imagem, setImagem] = useState('/person.jpg');
+
+  function handleImage(){
+    if (imagem == '/person.jpg') {
+      setImagem('/myperson.png');
+      return;
+    }
+    setImagem('/person.jpg');
+  }
   return (
     <Container>
       <Card>
@@ -19,8 +30,9 @@ export default function Apresentacao() {
             component="img"
             alt="Imagem de Perfil"
             height="250"
-            image={window.location.origin + '/person.jpg'}
+            image={window.location.origin + imagem}
             title="Imagem de Perfil"
+            onClick={handleImage}
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
@@ -32,13 +44,16 @@ export default function Apresentacao() {
           </CardContent>
         </CardActionArea>
         <CardActions style={{display: "flex", flexDirection: "row", justifyContent: "space-between"}}>
-          <Button size="small" color="primary"  startIcon={<GitHubIcon />}>
-            Github
-          </Button>
-
-          <Button size="small" color="primary" startIcon={<LinkedInIcon />}>
-            Linkedin
-          </Button>
+          <Link to={{ pathname: 'https://github.com/DevSantiro' }} target="_blank">
+            <Button size="small" color="primary"  startIcon={<GitHubIcon />}>
+              Github
+            </Button>
+          </Link>
+          <Link to={{ pathname: 'https://www.linkedin.com/in/rodrigo-santiago-04222a190/'}} target="_blank">
+            <Button size="small" color="primary" startIcon={<LinkedInIcon />}>
+              Linkedin
+            </Button>
+          </Link>
         </CardActions>
       </Card>
     </Container>
