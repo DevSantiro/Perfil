@@ -1,5 +1,6 @@
+import { Button } from '@material-ui/core';
 import React, { useEffect, useState } from 'react';
-import { useParams, useHistory } from 'react-router-dom';
+import { useParams, useHistory, Link } from 'react-router-dom';
 import { busca } from '../api/api';
 import '../assets/css/post.css';
 import Apresentacao from '../components/Apresentacao/Apresentacao';
@@ -11,6 +12,7 @@ const Post = () => {
   const { id } = useParams(); 
   const [post, setPost] = useState({});
 
+  
   useEffect(() =>{
     busca(`/posts/${id}`, setPost).catch(() =>{
       history.push('/404')
@@ -19,9 +21,14 @@ const Post = () => {
 
   return (
     <main className="container">
-
-      <h2 className="titulo-pagina">{post.title}</h2> {/*A ideia é aqui alterar por uma barra de navegacao (Informações, Formação, Certificação)*/}
-
+      <div className="titulo-pagina" style={{justifyContent: 'space-between', paddingRight: '1rem'}}>
+        <h2>{post.title}</h2> {/*A ideia é aqui alterar por uma barra de navegacao (Informações, Formação, Certificação)*/}
+        <Link to={`/formacao`}>
+          <Button variant="contained" color="primary">
+            Voltar
+          </Button>
+        </Link>
+      </div>
       <QuadroPrincipal >
         <Quadro>
           <Apresentacao />

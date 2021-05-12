@@ -5,22 +5,23 @@ import '../../assets/css/blog.css';
 import { useHistory, useParams } from 'react-router';
 
 const Destaque = () => {
-  let history = useHistory();
-  const [destaques, setDestaque] = useState({})
   const { id } = useParams(); 
+  let history = useHistory();
+  const [destaques, setDestaque] = useState([]);
 
+  const url = `/posts/${id}`;
   useEffect(() =>{
-    busca(`/posts/${id}`, setDestaque).catch(() =>{
+    busca(url, setDestaque).catch(() =>{
       history.push('/404')
     })
-  }, [id]);
+  }, [url]);
 
 
   return (
     <ul className="container" style={{display:"flex", justifyContent: "space-between", paddingLeft: "0rem", textAlign: "center"}}>
-      {destaques.destaque.map((destaque) =>
-        <LIDestaque>{destaque}</LIDestaque>
-      )}             
+      {destaques.destaque && destaques.destaque.map((campo) =>
+        <LIDestaque>{campo}</LIDestaque>
+      )}  
     </ul>
   );
 }

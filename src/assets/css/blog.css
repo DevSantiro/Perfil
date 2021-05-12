@@ -4,7 +4,8 @@
     justify-content: space-evenly;
     margin-top: 2rem;
     text-align: center;
-    max-height: 30rem;
+    height: 31rem;
+    max-height: 31rem;
 }
 
 .lista-categorias__categoria {
