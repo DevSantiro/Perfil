@@ -13,7 +13,7 @@ const ListaCategorias = () => {
   }, [])
 
   return (
-    <ul className="lista-categorias container">
+    <ul className="lista-categorias" >
       {
         categorias.map((categoria) => (
           <Link to={`/categoria/${categoria.id}`}>

@@ -1,9 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import imagem from '../assets/img/dev.svg';
 import '../assets/css/componentes/cabecalho.css';
 import { Link } from 'react-router-dom';
 
 const Cabecalho = () => {
+  
+  const [estadoAtual, setEstadoAtual] = useState(0);
+
+  function resetaClasses() {
+    document.getElementById('Inicio').classList.remove('menu-item--entrar');
+    document.getElementById('Formacao').classList.remove('menu-item--entrar');
+    document.getElementById('Sobre').classList.remove('menu-item--entrar');
+  }
+
+  function handleEstadoAtualInicio(){
+    resetaClasses();
+    let item = document.getElementById('Inicio');
+    item.classList.add('menu-item--entrar');
+  }
+
+  function handleEstadoAtualFormacao(){
+    resetaClasses();
+    let item = document.getElementById('Formacao');
+    item.classList.add('menu-item--entrar');
+  }
+
+  function handleEstadoAtualSobre(){
+    resetaClasses();
+    let item = document.getElementById('Sobre');
+    item.classList.add('menu-item--entrar');
+  }
+
   return (
     <header className="cabecalho container"> 
       <div className="menu-hamburger">
@@ -19,9 +46,9 @@ const Cabecalho = () => {
 
       <nav className="menu-cabecalho">
         <ul className="menu-itens">
-          <li><Link to="/" className="menu-item menu-item--entrar">Inicio</Link></li>
-          <li><Link to="/formacao" className="menu-item">Formação</Link></li>
-          <li><Link to="/sobre" className="menu-item">Sobre</Link></li>
+          <li><Link id="Inicio" to="/" onClick={handleEstadoAtualInicio} className="menu-item menu-item--entrar">Inicio</Link></li>
+          <li><Link id="Formacao" to="/formacao" onClick={handleEstadoAtualFormacao} className="menu-item">Formação</Link></li>
+          <li><Link id="Sobre" to="/sobre" onClick={handleEstadoAtualSobre} className="menu-item">Sobre</Link></li>
         </ul>
       </nav>
       <div className="menu-cabecalho-background"></div>

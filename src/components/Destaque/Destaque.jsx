@@ -20,7 +20,7 @@ const Destaque = () => {
   return (
     <ul className="container" style={{display:"flex", justifyContent: "space-between", paddingLeft: "0rem", textAlign: "center"}}>
       {destaques.destaque && destaques.destaque.map((campo) =>
-        <LIDestaque>{campo}</LIDestaque>
+        <LIDestaque key={campo}>{campo}</LIDestaque>
       )}  
     </ul>
   );

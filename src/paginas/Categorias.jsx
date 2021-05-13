@@ -1,5 +1,7 @@
+import { Button } from "@material-ui/core";
 import React, { useEffect, useState } from "react";
 import { Route, Switch, useParams, useRouteMatch } from "react-router";
+import { Quadro, Quadro2, QuadroPrincipal } from '../components/Formacao/style';
 import { Link } from "react-router-dom";
 import { busca } from "../api/api";
 import "../assets/css/blog.css";
@@ -21,29 +23,31 @@ const Categoria = () => {
   return (
     <>
       <div className="container">
-        <h2 className="titulo-pagina">Formações</h2>
-      </div>
+        <div className="titulo-pagina" style={{justifyContent: 'space-between', paddingRight: '1rem'}}>
+          <h2>Formações</h2> {/*A ideia é aqui alterar por uma barra de navegacao (Informações, Formação, Certificação)*/}
+          <Link to={`/formacao`}>
+            <Button variant="contained" color="primary">
+              Voltar
+            </Button>
+          </Link>
+        </div>
 
-      <ListaCategorias />
-      <ul className="lista-categorias container flex">
-        {
-          subcategorias.map((subcategoria) => (
-            <li className={`lista-categorias__categoria lista-categorias__categoria--${id}`} key={subcategoria}>
-              <Link to={`${url}/${subcategoria}`}>
-                {subcategoria}
-              </Link>
-            </li>
-          ))
-        }
-      </ul>
-      <Switch>
-        <Route exact path={`${path}/`}>
-          <ListaPost url={`/posts?categoria=${id}`} />
-        </Route>
-        <Route path={`${path}/:subcategoria`}>
-          <SubCategoria />
-        </Route>
-      </Switch>
+        <QuadroPrincipal >
+          <Quadro>
+            <ListaCategorias />
+          </Quadro>
+          <Quadro2>
+            <Switch>
+              <Route exact path={`${path}/`}>
+                <ListaPost url={`/posts?categoria=${id}`} />
+              </Route>
+              <Route path={`${path}/:subcategoria`}>
+                <SubCategoria />
+              </Route>
+            </Switch>
+          </Quadro2>
+        </QuadroPrincipal>
+      </div>
     </>
   );
 };
