@@ -11,7 +11,11 @@ const Cabecalho = () => {
     document.getElementById('Inicio').classList.remove('menu-item--entrar');
     document.getElementById('Formacao').classList.remove('menu-item--entrar');
     document.getElementById('Sobre').classList.remove('menu-item--entrar');
+    document.getElementById('Admin').classList.remove('menu-item--entrar');
+
   }
+
+  // Refatorar este trecho p/ uma unicaFuncao
 
   function handleEstadoAtualInicio(){
     resetaClasses();
@@ -29,6 +33,12 @@ const Cabecalho = () => {
     resetaClasses();
     let item = document.getElementById('Sobre');
     item.classList.add('menu-item--entrar');
+  }
+
+  function handleEstadoAtualAdmin(){
+    resetaClasses();
+    let item = document.getElementById('Admin');
+    item.classList.add('menu-item--entrar'); 
   }
 
   return (
@@ -49,6 +59,7 @@ const Cabecalho = () => {
           <li><Link id="Inicio" to="/" onClick={handleEstadoAtualInicio} className="menu-item menu-item--entrar">Inicio</Link></li>
           <li><Link id="Formacao" to="/formacao" onClick={handleEstadoAtualFormacao} className="menu-item">Formação</Link></li>
           <li><Link id="Sobre" to="/sobre" onClick={handleEstadoAtualSobre} className="menu-item">Sobre</Link></li>
+          <li><Link id="Admin" to="/administrador" onClick={handleEstadoAtualAdmin} className="menu-item">Administrador</Link></li>
         </ul>
       </nav>
       <div className="menu-cabecalho-background"></div>

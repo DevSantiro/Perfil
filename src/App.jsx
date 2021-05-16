@@ -9,6 +9,7 @@ import Cabecalho from './components/Cabecalho';
 import Post from './paginas/Post';
 import Categoria from './paginas/Categorias';
 import Home from './paginas/Home';
+import { Administrador } from './paginas/Administrador';
 
 function App() {
   return (
@@ -34,6 +35,10 @@ function App() {
 
           <Route path='/posts/:id'>
             <Post />
+          </Route>
+
+          <Route path='/administrador'>
+            <Administrador />
           </Route>
 
           <Route >

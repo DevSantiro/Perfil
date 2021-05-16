@@ -1,15 +1,8 @@
-import { TextField } from '@material-ui/core'
 import React from 'react'
 import Apresentacao from '../components/Apresentacao/Apresentacao'
 import { GridTwoElement, GridThreeElement, Quadro, Quadro2, QuadroPrincipal, TextInput, GridOneElement } from '../components/Apresentacao/style'
-import ListaCategorias from '../components/ListaCategorias'
-import ListaPost from '../components/ListaPost'
 
 const Home = () => {
-
-  const style = {
-
-  }
 
   return (
     <main>
